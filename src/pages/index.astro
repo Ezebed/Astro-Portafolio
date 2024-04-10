@@ -1,4 +1,36 @@
 ---
+import "../assets/css/main.css";
+import SkillCard from "../components/SkillCard";
+import type { SkillCardProps } from "../utils/SkillCardProps";
+
+// const skills:SkillCardProps[] = ['html5','css','javascript','laravel','tailwindcss']
+const skills:SkillCardProps[] = [
+	{
+		skillText:"html5",
+		bgColor:"",
+		logoClass:"logos--html-5",
+	},
+	{
+		skillText:"css",
+		bgColor:"",
+		logoClass:"logos--css-3",
+	},
+	{
+		skillText:"javascript",
+		bgColor:"",
+		logoClass:"logos--javascript",
+	},
+	{
+		skillText:"laravel",
+		bgColor:"",
+		logoClass:"logos--laravel",
+	},
+	{
+		skillText:"tailwindcss",
+		bgColor:"bg-[rgba(5_163_81)]",
+		logoClass:"logos--tailwindcss-icon",
+	},
+]
 
 ---
 
@@ -8,9 +40,52 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Ezebed</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="rotating-gradient text-white space-y-10">
+		<div class="w-full h-[20rem] bg-[rgba(13_13_13_/.6)] flex flex-col items-center justify-center space-y-4 shadow-[0_20px_15px_10px_rgba(13_13_13_/.6)]">
+			
+			<h1 class="font-bold text-7xl">Obed Ezequiel Villegas Flores</h1>
+			<p class="text-3xl">Front-End developer</p>
+			
+		</div>
+
+		<section class="px-8 font-bold">
+			<h2 class="uppercase text-3xl">Skills</h2>
+
+			<div class="flex space-x-4 justify-center my-4">
+				{skills.map((skill:SkillCardProps) => (<SkillCard {...skill} />))}
+			</div>
+			
+			
+		</section>
+
+		<section class="px-8 mb-8 space-y-4">
+			<h2 class="text-3xl capitalize font-bold">proyectos</h2>
+
+			<div class="flex flex-col justify-center space-y-4 m-b-10">
+				<figure class="w-fit h-[15rem] p-4 bg-[rgba(13_13_13_/.6)] rounded-md flex space-x-2">
+
+					<img
+						class="h-full object-contain" 
+						src="https://raw.githubusercontent.com/Ezebed/Laravel-To-Do-List/main/public/img/example.png" 
+						alt="laravel-to-do-list">
+					
+					<div class="relative">
+						<h3 class="font-bold text-2xl">Laravel To Do List</h3>
+						<p>Sitio web responsive donde se pueden crear,eliminar, editar y marcar como realizadas una lista de tareas. ademas cuenta con autenticacion de usuarios utilizado breeze. </p>
+
+						<a class="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 cursor-pointer font-bold rounded-md active:scale-[.9] shadow-[3px_3px_0_0_#000] active:shadow-[none] transition-all ease-in-out absolute bottom-2 right-2" 
+							href="https://github.com/Ezebed/Laravel-To-Do-List" 
+							target="_blank">Github</a>
+					</div>
+
+				</figure>
+			</div>
+		</section>
+
+		<footer class="h-[5rem] bg-[rgba(13_13_13_/.6)]">
+			hola mundo
+		</footer>
 	</body>
 </html>
