@@ -10,7 +10,7 @@ export default function SkillCard({skillText,bgColor,logoClass}:SkillCardProps){
     // )
 
     return (
-        <figure className="px-4 py-2 bg-[rgba(13_13_13_/.4)] rounded-full flex space-x-2 items-center shadow-sm shadow-indigo-500 hover:scale-125 transition-all">
+        <figure className={"px-4 py-2 bg-[rgba(13_13_13_/.4)] rounded-full flex space-x-2 items-center shadow-sm hover:scale-125 transition-all "+bgColor}>
            <span className={logoClass+" text-[1rem] "}></span>
 
            <p className="text-xl capitalize ">{skillText}</p>
