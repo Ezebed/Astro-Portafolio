@@ -6,6 +6,7 @@ import type { SkillCardProps } from "../utils/SkillCardProps";
 import type { ProjectCardProps } from "../utils/ProjectCardProps";
 
 
+
 const skills:SkillCardProps[] = [
 	{
 		skillText:"html5",
@@ -57,27 +58,43 @@ const projects:ProjectCardProps[] = [
 		<title>Ezebed</title>
 	</head>
 	<body class="background text-white space-y-20 snap-mandatory">
-		<div class="w-full h-screen snap-center bg-[rgba(13_13_13_/.6)] flex flex-col items-center justify-center space-y-4 ">
+		<div class="w-full h-screen snap-center bg-[rgba(13_13_13_/.6)] flex flex-col items-center justify-center space-y-4 overflow-hidden relative">
 			
 			<h1 class="font-bold text-7xl">Obed Ezequiel <span class="text-indigo-500">Villegas Flores</span></h1>
 			<p class="text-3xl">Frontend developer</p>
+
+			<div class="stars">
+				<p class="star star-1"></pcla>
+				<p class="star star-2"></pcla>
+				<p class="star star-3"></pcla>
+				<p class="star star-4"></pcla>
+				<p class="star star-5"></pcla>
+				<p class="star star-6"></pcla>
+			</div>
 			
 		</div>
 
 		<section class="px-8 font-bold h-fit">
 			<h2 class="uppercase italic text-3xl">Skills</h2>
 
-			<div class="flex space-x-4 justify-center my-4">
+			<div class="flex flex-wrap space-x-4 space-y-2 justify-center my-4 ">
 				{skills.map((skill:SkillCardProps) => (<SkillCard {...skill} />))}
 			</div>
 		</section>
 
 		<section class="px-8 mb-8 space-y-4 h-fit">
-			<h2 class="text-3xl uppercase font-bold">proyectos</h2>
+			<h2 class="text-3xl uppercase font-bold italic">proyectos</h2>
 
 			<div class="flex flex-col justify-center space-y-4 m-b-10">
 				{projects.map((project:ProjectCardProps) => (<ProjectCard {...project} />))}
 			</div>
+
+			
+		</section>
+
+		<section class="px-8">
+			<h2 class="text-3xl uppercase font-bold italic">Certificados</h2>
+
 		</section>
 
 		<footer class="py-2 bg-[rgba(13_13_13_/.6)] flex justify-center space-x-4">
