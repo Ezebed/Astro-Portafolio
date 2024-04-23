@@ -4,7 +4,7 @@ import {Suspense} from 'react'
 export default function ProjectCard({title,description,tecnologies,img,siteUrl,git}:ProjectCardProps){
     return(
 		<Suspense fallback={<SkeletonProjectCard/>} >
-			<figure className="w-fit min-h-[15rem] p-4 bg-[rgba(13_13_13_/.6)] rounded-md flex flex-col md:flex-row space-y-3 md:space-x-2">
+			<figure className="waiter w-fit min-h-[15rem] p-4 bg-[rgba(13_13_13_/.6)] rounded-md flex flex-col md:flex-row space-y-3 md:space-x-2">
 
 				<img
 					className="h-full w-full md:max-w-[35%] object-contain" 

@@ -52,11 +52,6 @@
     }
   }
 
-  .rotate{
-    rotate: 45deg;
-    transition: all 3s;
-  }
-
   .star{
     position: absolute;
     width: 4px;
@@ -157,6 +152,21 @@
     to{
       top:100%;
       left:92%;
+    }
+  }
+
+  .slide-in{
+    animation: slide-in 1s ease-in-out;
+  }
+
+  @keyframes slide-in {
+    from{ 
+      transform: translateX(-1000px);
+      opacity: 0;
+    }
+    to{
+      transform: translateX(0);
+      opacity: 1;
     }
   }
   
