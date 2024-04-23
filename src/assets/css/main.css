@@ -52,6 +52,11 @@
     }
   }
 
+  .rotate{
+    rotate: 45deg;
+    transition: all 3s;
+  }
+
   .star{
     position: absolute;
     width: 4px;

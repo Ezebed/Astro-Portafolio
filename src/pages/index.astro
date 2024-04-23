@@ -7,6 +7,11 @@ import type { ProjectCardProps } from "../utils/ProjectCardProps";
 
 
 
+// script
+
+
+
+// Data
 const skills:SkillCardProps[] = [
 	{
 		skillText:"html5",
@@ -60,10 +65,10 @@ const projects:ProjectCardProps[] = [
 	<body class="background text-white space-y-20 snap-mandatory">
 		<div class="w-full h-screen snap-center bg-[rgba(13_13_13_/.6)] flex flex-col items-center justify-center space-y-4 overflow-hidden relative">
 			
-			<h1 class="font-bold text-7xl">Obed Ezequiel <span class="text-indigo-500">Villegas Flores</span></h1>
+			<h1 class="font-bold text-7xl text-center">Obed Ezequiel <span class="text-indigo-500">Villegas Flores</span></h1>
 			<p class="text-3xl">Frontend developer</p>
 
-			<div class="stars">
+			<div class="stars ">
 				<p class="star star-1"></pcla>
 				<p class="star star-2"></pcla>
 				<p class="star star-3"></pcla>
@@ -93,7 +98,7 @@ const projects:ProjectCardProps[] = [
 		</section>
 
 		<section class="px-8">
-			<h2 class="text-3xl uppercase font-bold italic">Certificados</h2>
+			<h2 class="text-3xl uppercase font-bold italic waiter">Certificados</h2>
 
 		</section>
 
@@ -102,5 +107,11 @@ const projects:ProjectCardProps[] = [
 			<a class="simple-icons--github text-xl" href="https://github.com/Ezebed" target="_blank"></a>
 			<a class="simple-icons--linkedin text-xl" href="https://www.linkedin.com/in/obed-villegas-aa537b132" target="_blank"></a>
 		</footer>
+
+		<script>
+			import { elementObserver } from "../assets/ts/elementObserver";
+
+			elementObserver(".waiter","rotate");
+		</script>
 	</body>
 </html>
