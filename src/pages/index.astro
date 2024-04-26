@@ -5,7 +5,7 @@ import ProjectCard from "../components/ProjectCard";
 import type { SkillCardProps } from "../utils/SkillCardProps";
 import type { ProjectCardProps } from "../utils/ProjectCardProps";
 
-
+import courseImg from "../assets/img/cursos/curso-de-laravel.webp"
 
 // script
 
@@ -50,6 +50,8 @@ const projects:ProjectCardProps[] = [
 		git:"https://github.com/Ezebed/Laravel-To-Do-List"
 	}
 ]
+
+// const courseImg:string = "../../public/img/cursos/curso-de-laravel.webp"
 
 ---
 
@@ -99,7 +101,7 @@ const projects:ProjectCardProps[] = [
 		<section class="px-8 font-bold h-fit">
 			<h2 class="uppercase italic text-3xl">Skills</h2>
 
-			<div class="flex flex-wrap space-x-4 space-y-2 justify-center my-4 ">
+			<div class="flex flex-wrap gap-x-4 gap-y-2 justify-center my-4 ">
 				{skills.map((skill:SkillCardProps) => (<SkillCard {...skill} />))}
 			</div>
 		</section>
@@ -114,8 +116,20 @@ const projects:ProjectCardProps[] = [
 			
 		</section>
 
-		<section class="px-8">
+		<section class="px-8 space-y-4 ">
 			<h2 class="text-3xl uppercase font-bold italic ">Certificados</h2>
+
+			<div class="flex flex-col md:flex-row justify-center gap-x-2 gap-y-4 flex-wrap">
+				<figure class="waiter min-h-[10rem] w-[16rem] p-4 bg-[rgba(13_13_13_/.6)] flex gap-y-2 flex-col rounded-md ">
+					<img 
+						src={courseImg.src} 
+						alt="certificate_alt"
+						class="w-full"
+					>
+					<strong class="font-bold uppercase">Curso Laravel</strong>
+					<span class="text-sm text-[#777]" >2024</span>
+				</figure>
+			</div>
 
 		</section>
 
