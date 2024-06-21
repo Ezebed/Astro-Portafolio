@@ -5,144 +5,192 @@ import ProjectCard from "../components/ProjectCard";
 import type { SkillCardProps } from "../utils/SkillCardProps";
 import type { ProjectCardProps } from "../utils/ProjectCardProps";
 
-import courseImg from "../assets/img/cursos/curso-de-laravel.webp"
+import courseImg from "../assets/img/cursos/curso-de-laravel.webp";
+
+import { projects, skills } from "../utils/constants";
 
 // script
 
-
-
-// Data
-const skills:SkillCardProps[] = [
-	{
-		skillText:"html5",
-		bgColor:"shadow-[#e44d26]",
-		logoClass:"logos--html-5",
-	},
-	{
-		skillText:"css",
-		bgColor:"shadow-[#264de4]",
-		logoClass:"logos--css-3",
-	},
-	{
-		skillText:"javascript",
-		bgColor:"shadow-[#f7df1e]",
-		logoClass:"logos--javascript",
-	},
-	{
-		skillText:"laravel",
-		bgColor:"shadow-[#ff2d20]",
-		logoClass:"logos--laravel",
-	},
-	{
-		skillText:"tailwindcss",
-		bgColor:"shadow-[#2298bd]",
-		logoClass:"logos--tailwindcss-icon",
-	},
-]
-
-const projects:ProjectCardProps[] = [
-	{
-		title:"Laravel To Do List",
-		description:"Sitio web responsive donde se pueden crear,eliminar, editar y marcar como realizadas una lista de tareas. ademas cuenta con autenticacion de usuarios utilizado breeze.",
-		tecnologies:["laravel","livewire","breeze","tailwindcss"],
-		img:"https://raw.githubusercontent.com/Ezebed/Laravel-To-Do-List/main/public/img/example.png",
-		siteUrl:"",
-		git:"https://github.com/Ezebed/Laravel-To-Do-List"
-	}
-]
-
 // const courseImg:string = "../../public/img/cursos/curso-de-laravel.webp"
-
 ---
 
 <html lang="es" class="scroll-smooth">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css">
-		<title>Ezebed</title>
-	</head>
-	<body class="background text-white space-y-20 snap-mandatory">
-		<div class="w-full h-screen snap-center bg-[rgba(13_13_13_/.6)] flex flex-col items-center justify-center space-y-4 overflow-hidden relative">
-			
-			<h1 class="font-bold text-7xl text-center">Obed Ezequiel <span class="text-indigo-500">Villegas Flores</span></h1>
-			<p class="text-3xl">Frontend developer</p>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css"
+    />
+    <title>Ezebed</title>
+  </head>
+  <body class="background text-white space-y-20 snap-mandatory">
+    <div
+      class="w-full h-screen snap-center bg-[rgba(13_13_13_/.6)] flex flex-col items-center justify-center space-y-4 overflow-hidden relative"
+    >
+      <h1 class="font-bold text-7xl text-center">
+        Obed Ezequiel <span class="text-indigo-500">Villegas Flores</span>
+      </h1>
+      <p class="text-3xl">Frontend developer</p>
 
-			<div class="w-10/12 md:w-fit h-fit p-4 bg-[rgba(255_255_255_/.1)] backdrop-blur-sm rounded-3xl border border-slate-200 flex flex-wrap gap-4 justify-center items-center">
-				<a class="simple-icons--github text-5xl md:text-3xl" href="https://github.com/Ezebed" target="_blank"></a>
-				<a class="simple-icons--linkedin text-5xl md:text-3xl" href="https://www.linkedin.com/in/obed-villegas-aa537b132" target="_blank"></a>
-				<a class="simple-icons--github text-5xl md:text-3xl" href="https://github.com/Ezebed" target="_blank"></a>
-				<a class="simple-icons--linkedin text-5xl md:text-3xl" href="https://www.linkedin.com/in/obed-villegas-aa537b132" target="_blank"></a>
-				<a class="simple-icons--github text-5xl md:text-3xl" href="https://github.com/Ezebed" target="_blank"></a>
-				<a class="simple-icons--linkedin text-5xl md:text-3xl" href="https://www.linkedin.com/in/obed-villegas-aa537b132" target="_blank"></a>
-				<a class="simple-icons--github text-5xl md:text-3xl" href="https://github.com/Ezebed" target="_blank"></a>
-				<a class="simple-icons--linkedin text-5xl md:text-3xl" href="https://www.linkedin.com/in/obed-villegas-aa537b132" target="_blank"></a>
-				<a class="simple-icons--github text-5xl md:text-3xl" href="https://github.com/Ezebed" target="_blank"></a>
-				<a class="simple-icons--linkedin text-5xl md:text-3xl" href="https://www.linkedin.com/in/obed-villegas-aa537b132" target="_blank"></a>
-				<a class="simple-icons--github text-5xl md:text-3xl" href="https://github.com/Ezebed" target="_blank"></a>
-				<a class="simple-icons--linkedin text-5xl md:text-3xl" href="https://www.linkedin.com/in/obed-villegas-aa537b132" target="_blank"></a>
-			</div>
+      <div
+        class="w-10/12 md:w-fit h-fit p-4 bg-[rgba(255_255_255_/.1)] backdrop-blur-sm rounded-3xl border border-slate-200 flex flex-wrap gap-4 justify-center items-center"
+      >
+        <a
+          class="simple-icons--github text-5xl md:text-3xl"
+          href="https://github.com/Ezebed"
+          target="_blank"></a>
+        <a
+          class="simple-icons--linkedin text-5xl md:text-3xl"
+          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
+          target="_blank"></a>
+        <a
+          class="simple-icons--github text-5xl md:text-3xl"
+          href="https://github.com/Ezebed"
+          target="_blank"></a>
+        <a
+          class="simple-icons--linkedin text-5xl md:text-3xl"
+          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
+          target="_blank"></a>
+        <a
+          class="simple-icons--github text-5xl md:text-3xl"
+          href="https://github.com/Ezebed"
+          target="_blank"></a>
+        <a
+          class="simple-icons--linkedin text-5xl md:text-3xl"
+          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
+          target="_blank"></a>
+        <a
+          class="simple-icons--github text-5xl md:text-3xl"
+          href="https://github.com/Ezebed"
+          target="_blank"></a>
+        <a
+          class="simple-icons--linkedin text-5xl md:text-3xl"
+          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
+          target="_blank"></a>
+        <a
+          class="simple-icons--github text-5xl md:text-3xl"
+          href="https://github.com/Ezebed"
+          target="_blank"></a>
+        <a
+          class="simple-icons--linkedin text-5xl md:text-3xl"
+          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
+          target="_blank"></a>
+        <a
+          class="simple-icons--github text-5xl md:text-3xl"
+          href="https://github.com/Ezebed"
+          target="_blank"></a>
+        <a
+          class="simple-icons--linkedin text-5xl md:text-3xl"
+          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
+          target="_blank"></a>
+      </div>
 
-			
+      <div class="stars">
+        <p class="star star-1"></p>
+        <p class="star star-2"></p>
+        <p class="star star-3"></p>
+        <p class="star star-4"></p>
+        <p class="star star-5"></p>
+        <p class="star star-6"></p>
+      </div>
+    </div>
 
-			<div class="stars ">
-				<p class="star star-1"></pcla>
-				<p class="star star-2"></pcla>
-				<p class="star star-3"></pcla>
-				<p class="star star-4"></pcla>
-				<p class="star star-5"></pcla>
-				<p class="star star-6"></pcla>
-			</div>
-			
-		</div>
+    <section class="px-8 font-bold h-fit">
+      <h2 class="uppercase italic text-3xl">Skills</h2>
 
-		<section class="px-8 font-bold h-fit">
-			<h2 class="uppercase italic text-3xl">Skills</h2>
+      <div class="flex flex-wrap gap-x-4 gap-y-2 justify-center my-4">
+        {skills.map((skill: SkillCardProps) => <SkillCard {...skill} />)}
+      </div>
+    </section>
 
-			<div class="flex flex-wrap gap-x-4 gap-y-2 justify-center my-4 ">
-				{skills.map((skill:SkillCardProps) => (<SkillCard {...skill} />))}
-			</div>
-		</section>
+    <section class="px-8 mb-8 space-y-4 h-fit">
+      <h2 class="text-3xl uppercase font-bold italic">proyectos</h2>
 
-		<section class="px-8 mb-8 space-y-4 h-fit">
-			<h2 class="text-3xl uppercase font-bold italic">proyectos</h2>
+      <div class="flex flex-col justify-center space-y-4 m-b-10">
+        {
+          projects.map((project: ProjectCardProps) => (
+            <ProjectCard {...project} />
+          ))
+        }
+      </div>
+    </section>
 
-			<div class="flex flex-col justify-center space-y-4 m-b-10">
-				{projects.map((project:ProjectCardProps) => (<ProjectCard {...project} />))}
-			</div>
+    <section class="px-8 space-y-4">
+      <h2 class="text-3xl uppercase font-bold italic">Certificados</h2>
 
-			
-		</section>
+      <div
+        class="flex flex-col md:flex-row justify-center gap-x-2 gap-y-4 flex-wrap"
+      >
+        <figure
+          class="waiter h-[10rem] w-[16rem] flex flex-col gap-y-2 rounded-md"
+        >
+          <img
+            src={courseImg.src}
+            alt="certificate_alt"
+            class="object-contain"
+          />
+          <div class="flex flex-col gap-y-2">
+            <strong class="font-bold uppercase">Curso de Laravel</strong>
+            <span class="text-sm text-[#777]">2024</span>
+          </div>
+        </figure>
+      </div>
+    </section>
 
-		<section class="px-8 space-y-4 ">
-			<h2 class="text-3xl uppercase font-bold italic ">Certificados</h2>
+    <section class="px-8 space-y-4">
+      <h2 class="text-3xl uppercase font-bold italic">contactame</h2>
 
-			<div class="flex flex-col md:flex-row justify-center gap-x-2 gap-y-4 flex-wrap">
-				<figure class="waiter min-h-[10rem] w-[16rem] p-4 bg-[rgba(13_13_13_/.6)] flex gap-y-2 flex-col rounded-md ">
-					<img 
-						src={courseImg.src} 
-						alt="certificate_alt"
-						class="w-full"
-					>
-					<strong class="font-bold uppercase">Curso Laravel</strong>
-					<span class="text-sm text-[#777]" >2024</span>
-				</figure>
-			</div>
+      <address class="grid grid-cols-2">
+        <div class="flex flex-col gap-y-2">
+          <a
+            href="https://github.com/Ezebed"
+            target="_blank"
+            class="w-fit min-w-32 h-8 px-2 py-1 flex items-center gap-x-2"
+          >
+            <span class="simple-icons--github text-lg"></span>
+            <p class="capitalize text-lg">github</p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/obed-villegas-aa537b132"
+            target="_blank"
+            class="w-fit min-w-32 h-8 px-2 py-1 flex items-center gap-x-2"
+          >
+            <span class="simple-icons--linkedin text-lg"></span>
+            <p class="capitalize text-lg">Linkedin</p>
+          </a>
+          <a
+            href="mailto:obedvillegas@protonmail.com"
+            target="_blank"
+            class="w-fit min-w-32 h-8 px-2 py-1 flex items-center gap-x-2"
+          >
+            <span class="simple-icons--protonmail text-lg"></span>
+            <p class="text-lg">obedvillegas@protonmail.com</p>
+          </a>
+        </div>
 
-		</section>
+        <form action=""></form>
+      </address>
+    </section>
 
-		<footer class="py-2 bg-[rgba(13_13_13_/.6)] flex justify-center space-x-4">
-			<p><strong>&copy</strong> 2024 Obed Villegas</p>
-			<a class="simple-icons--github text-xl" href="https://github.com/Ezebed" target="_blank"></a>
-			<a class="simple-icons--linkedin text-xl" href="https://www.linkedin.com/in/obed-villegas-aa537b132" target="_blank"></a>
-		</footer>
+    <footer class="py-2 bg-[rgba(13_13_13_/.6)] flex justify-center space-x-4">
+      <p><strong>&copy</strong> 2024 Obed Villegas</p>
+      <a
+        class="simple-icons--github text-xl"
+        href="https://github.com/Ezebed"
+        target="_blank"></a>
+      <a
+        class="simple-icons--linkedin text-xl"
+        href="https://www.linkedin.com/in/obed-villegas-aa537b132"
+        target="_blank"></a>
+    </footer>
 
-		<script>
-			import { elementObserver } from "../assets/ts/elementObserver";
+    <script>
+      import { elementObserver } from "../assets/ts/elementObserver";
 
-			elementObserver(".waiter","slide-in");
-		</script>
-	</body>
+      elementObserver(".waiter", "slide-in");
+    </script>
+  </body>
 </html>

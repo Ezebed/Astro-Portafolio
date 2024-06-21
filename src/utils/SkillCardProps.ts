@@ -1,5 +1,5 @@
-export interface SkillCardProps{
-    skillText:string;
-    bgColor:string;
-    logoClass:string;
+export interface SkillCardProps {
+  skillText: string;
+  bgColor: string;
+  logoClass: string;
 }
