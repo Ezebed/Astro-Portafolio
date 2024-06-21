@@ -16,13 +16,13 @@ export default function SkillCard({
   return (
     <figure
       className={
-        "px-4 py-2 bg-[rgba(13_13_13_/.4)] rounded-full flex space-x-2 items-center shadow-sm hover:scale-[1.1] transition-all " +
+        "flex items-center space-x-2 rounded-full bg-[rgba(13_13_13_/.4)] px-4 py-2 shadow-sm transition-all hover:scale-[1.1] " +
         bgColor
       }
     >
-      <span className={logoClass + " text-[1rem] "}></span>
+      <span className={logoClass + " text-[1rem]"}></span>
 
-      <p className="text-xl capitalize ">{skillText}</p>
+      <p className="text-xl capitalize">{skillText}</p>
     </figure>
   );
 }

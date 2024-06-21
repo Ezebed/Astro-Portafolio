@@ -32,8 +32,7 @@ export const skills: SkillCardProps[] = [
 export const projects: ProjectCardProps[] = [
   {
     title: "Laravel To Do List",
-    description:
-      "Sitio web responsive donde se pueden crear,eliminar, editar y marcar como realizadas una lista de tareas. ademas cuenta con autenticacion de usuarios utilizado breeze.",
+    description: "Aplicacion web de listas de tareas.",
     tecnologies: ["laravel", "livewire", "breeze", "tailwindcss"],
     img: "https://raw.githubusercontent.com/Ezebed/Laravel-To-Do-List/main/public/img/example.png",
     siteUrl: "",
