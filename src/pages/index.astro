@@ -39,12 +39,8 @@ import { projects, skills } from "../utils/constants";
         class="flex h-fit w-10/12 flex-wrap items-center justify-center gap-4 rounded-3xl border border-slate-200 bg-[rgba(255_255_255_/.1)] p-4 backdrop-blur-sm md:w-fit"
       >
         <a
-          class="simple-icons--github text-5xl md:text-3xl"
-          href="https://github.com/Ezebed"
-          target="_blank"></a>
-        <a
-          class="simple-icons--linkedin text-5xl md:text-3xl"
-          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
+          class="simple-icons--whatsapp text-5xl md:text-3xl"
+          href="https://wa.me/584163351489"
           target="_blank"></a>
         <a
           class="simple-icons--github text-5xl md:text-3xl"
@@ -55,37 +51,9 @@ import { projects, skills } from "../utils/constants";
           href="https://www.linkedin.com/in/obed-villegas-aa537b132"
           target="_blank"></a>
         <a
-          class="simple-icons--github text-5xl md:text-3xl"
-          href="https://github.com/Ezebed"
-          target="_blank"></a>
-        <a
-          class="simple-icons--linkedin text-5xl md:text-3xl"
-          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
-          target="_blank"></a>
-        <a
-          class="simple-icons--github text-5xl md:text-3xl"
-          href="https://github.com/Ezebed"
-          target="_blank"></a>
-        <a
-          class="simple-icons--linkedin text-5xl md:text-3xl"
-          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
-          target="_blank"></a>
-        <a
-          class="simple-icons--github text-5xl md:text-3xl"
-          href="https://github.com/Ezebed"
-          target="_blank"></a>
-        <a
-          class="simple-icons--linkedin text-5xl md:text-3xl"
-          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
-          target="_blank"></a>
-        <a
-          class="simple-icons--github text-5xl md:text-3xl"
-          href="https://github.com/Ezebed"
-          target="_blank"></a>
-        <a
-          class="simple-icons--linkedin text-5xl md:text-3xl"
-          href="https://www.linkedin.com/in/obed-villegas-aa537b132"
-          target="_blank"></a>
+          href="mailto:obedvillegas@protonmail.com"
+          target="_blank"
+          class="simple-icons--protonmail text-5xl md:text-3xl"></a>
       </div>
 
       <div class="stars">
@@ -109,7 +77,7 @@ import { projects, skills } from "../utils/constants";
     <section class="mb-8 h-fit space-y-4 px-8">
       <h2 class="text-3xl font-bold uppercase italic">proyectos</h2>
 
-      <div class="m-b-10 flex flex-col justify-center space-y-4">
+      <div class="m-b-10 flex flex-wrap gap-4">
         {
           projects.map((project: ProjectCardProps) => (
             <ProjectCard {...project} />
@@ -141,12 +109,20 @@ import { projects, skills } from "../utils/constants";
     <section class="space-y-4 px-8">
       <h2 class="text-3xl font-bold uppercase italic">contactame</h2>
 
-      <address class="grid grid-cols-2">
-        <div class="flex flex-col gap-y-2">
+      <address class="grid sm:grid-cols-2">
+        <div class="flex flex-col gap-y-2 rounded-lg bg-[#222] p-4">
+          <a
+            href="https://wa.me/584163351489"
+            target="_blank"
+            class="flex h-8 w-fit items-center gap-x-2 px-2 py-1"
+          >
+            <span class="simple-icons--whatsapp text-lg"></span>
+            <p class="text-lg capitalize">+58 416-3351489</p>
+          </a>
           <a
             href="https://github.com/Ezebed"
             target="_blank"
-            class="flex h-8 w-fit min-w-32 items-center gap-x-2 px-2 py-1"
+            class="flex h-8 w-fit items-center gap-x-2 px-2 py-1"
           >
             <span class="simple-icons--github text-lg"></span>
             <p class="text-lg capitalize">github</p>
@@ -154,7 +130,7 @@ import { projects, skills } from "../utils/constants";
           <a
             href="https://www.linkedin.com/in/obed-villegas-aa537b132"
             target="_blank"
-            class="flex h-8 w-fit min-w-32 items-center gap-x-2 px-2 py-1"
+            class="flex h-8 w-fit items-center gap-x-2 px-2 py-1"
           >
             <span class="simple-icons--linkedin text-lg"></span>
             <p class="text-lg capitalize">Linkedin</p>
@@ -162,7 +138,7 @@ import { projects, skills } from "../utils/constants";
           <a
             href="mailto:obedvillegas@protonmail.com"
             target="_blank"
-            class="flex h-8 w-fit min-w-32 items-center gap-x-2 px-2 py-1"
+            class="flex h-8 w-fit items-center gap-x-2 px-2 py-1"
           >
             <span class="simple-icons--protonmail text-lg"></span>
             <p class="text-lg">obedvillegas@protonmail.com</p>
@@ -176,6 +152,10 @@ import { projects, skills } from "../utils/constants";
     <footer class="flex justify-center space-x-4 bg-[rgba(13_13_13_/.6)] py-2">
       <p><strong>&copy</strong> 2024 Obed Villegas</p>
       <a
+        class="simple-icons--whatsapp text-xl"
+        href="https://wa.me/584163351489"
+        target="_blank"></a>
+      <a
         class="simple-icons--github text-xl"
         href="https://github.com/Ezebed"
         target="_blank"></a>
@@ -183,6 +163,10 @@ import { projects, skills } from "../utils/constants";
         class="simple-icons--linkedin text-xl"
         href="https://www.linkedin.com/in/obed-villegas-aa537b132"
         target="_blank"></a>
+      <a
+        href="mailto:obedvillegas@protonmail.com"
+        target="_blank"
+        class="simple-icons--protonmail text-xl"></a>
     </footer>
 
     <script>
