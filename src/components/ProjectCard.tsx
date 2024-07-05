@@ -1,4 +1,4 @@
-import type { ProjectCardProps } from "../utils/ProjectCardProps";
+import type { ProjectCardProps } from "@/utils/ProjectCardProps";
 import { Suspense } from "react";
 
 export default function ProjectCard({

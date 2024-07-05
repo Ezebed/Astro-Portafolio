@@ -1,4 +1,4 @@
-import type { SkillCardProps } from "../utils/SkillCardProps";
+import type { SkillCardProps } from "@/utils/SkillCardProps";
 
 export default function SkillCard({
   skillText,
