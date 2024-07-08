@@ -2,8 +2,6 @@ import type { SkillCardProps } from "@/utils/SkillCardProps";
 import type { ProjectCardProps } from "@/utils/ProjectCardProps";
 import type { CertificateCardProps } from "@/utils/CertificateCardProps";
 
-import certificateLaravel from "@/assets/img/cursos/curso-de-laravel.webp";
-
 export const skills: SkillCardProps[] = [
   {
     skillText: "html5",
@@ -43,10 +41,14 @@ export const projects: ProjectCardProps[] = [
   },
 ];
 
+import certificateLaravelImg from "@/assets/img/cursos/curso-de-laravel.webp";
+import certificateLaravelPdf from "@/assets/certificates/diploma-laravel_compressed.pdf";
+
 export const certificates: CertificateCardProps[] = [
   {
-    imgSrc: certificateLaravel.src,
+    imgSrc: certificateLaravelImg.src,
     courseName: "Curso de Laravel",
-    date: "2024"
-  }
-]
+    date: "2024",
+    pdfPath: certificateLaravelPdf,
+  },
+];

@@ -92,10 +92,8 @@ import { projects, skills, certificates } from "@/utils/constants";
       <div
         class="flex flex-col flex-wrap justify-center gap-x-2 gap-y-4 md:flex-row"
       >
-        
-
         {
-          certificates.map((certificate:CertificateCardProps) => (
+          certificates.map((certificate: CertificateCardProps) => (
             <CertificateCard {...certificate} />
           ))
         }
