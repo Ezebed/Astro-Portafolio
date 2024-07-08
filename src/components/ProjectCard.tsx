@@ -1,4 +1,4 @@
-import type { ProjectCardProps } from "../utils/ProjectCardProps";
+import type { ProjectCardProps } from "@/utils/ProjectCardProps";
 import { Suspense } from "react";
 
 export default function ProjectCard({
@@ -15,7 +15,7 @@ export default function ProjectCard({
         <img
           src={img}
           alt={title + " img"}
-          className="h-[12rem] w-[20rem] rounded-t-md sm:rounded-tr-none sm:rounded-bl-md object-cover hover:object-contain"
+          className="h-[12rem] w-[20rem] rounded-t-md object-cover hover:object-contain sm:rounded-bl-md sm:rounded-tr-none"
         />
         <div className="flex w-full flex-col px-2 py-2">
           <strong className="mb-2 text-2xl">{title}</strong>

@@ -1,13 +1,13 @@
 ---
 import "../assets/css/main.css";
-import SkillCard from "../components/SkillCard";
-import ProjectCard from "../components/ProjectCard";
-import type { SkillCardProps } from "../utils/SkillCardProps";
-import type { ProjectCardProps } from "../utils/ProjectCardProps";
+import SkillCard from "@/components/SkillCard";
+import ProjectCard from "@/components/ProjectCard";
+import CertificateCard from "@/components/CertificateCard";
+import type { SkillCardProps } from "@/utils/SkillCardProps";
+import type { ProjectCardProps } from "@/utils/ProjectCardProps";
+import type { CertificateCardProps } from "@/utils/CertificateCardProps";
 
-import courseImg from "../assets/img/cursos/curso-de-laravel.webp";
-
-import { projects, skills } from "../utils/constants";
+import { projects, skills, certificates } from "@/utils/constants";
 
 // script
 
@@ -92,17 +92,11 @@ import { projects, skills } from "../utils/constants";
       <div
         class="flex flex-col flex-wrap justify-center gap-x-2 gap-y-4 md:flex-row"
       >
-        <figure
-          class="waiter flex h-fit w-[16rem] flex-col gap-y-2 rounded-md bg-[#222] pb-2"
-        >
-          <img
-            src={courseImg.src}
-            alt="certificate_alt"
-            class="h-[10rem] rounded-t-md object-cover"
-          />
-          <strong class="ml-2 font-bold uppercase">Curso de Laravel</strong>
-          <span class="ml-2 text-sm text-[#777]">2024</span>
-        </figure>
+        {
+          certificates.map((certificate: CertificateCardProps) => (
+            <CertificateCard {...certificate} />
+          ))
+        }
       </div>
     </section>
 

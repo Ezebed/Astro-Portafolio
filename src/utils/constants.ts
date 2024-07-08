@@ -1,5 +1,6 @@
-import type { SkillCardProps } from "./SkillCardProps";
-import type { ProjectCardProps } from "./ProjectCardProps";
+import type { SkillCardProps } from "@/utils/SkillCardProps";
+import type { ProjectCardProps } from "@/utils/ProjectCardProps";
+import type { CertificateCardProps } from "@/utils/CertificateCardProps";
 
 export const skills: SkillCardProps[] = [
   {
@@ -37,5 +38,17 @@ export const projects: ProjectCardProps[] = [
     img: "https://raw.githubusercontent.com/Ezebed/Laravel-To-Do-List/main/public/img/example.png",
     siteUrl: "",
     git: "https://github.com/Ezebed/Laravel-To-Do-List",
+  },
+];
+
+import certificateLaravelImg from "@/assets/img/cursos/curso-de-laravel.webp";
+import certificateLaravelPdf from "@/assets/certificates/diploma-laravel_compressed.pdf";
+
+export const certificates: CertificateCardProps[] = [
+  {
+    imgSrc: certificateLaravelImg.src,
+    courseName: "Curso de Laravel",
+    date: "2024",
+    pdfPath: certificateLaravelPdf,
   },
 ];
