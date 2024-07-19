@@ -22,16 +22,26 @@ export default function ProjectCard({
           <p className="mb-2">{description}</p>
           <div className="mb-4 flex flex-wrap gap-1 sm:mb-auto">
             {tecnologies.map((tech) => (
-              <span className="rounded-lg border-2 border-slate-400 px-2 py-1">
+              <span className="rounded-lg border-2 border-slate-400 px-2 py-1 capitalize">
                 {tech}
               </span>
             ))}
           </div>
 
-          <div className="sm:flex sm:flex-row-reverse">
+          <div className="gap-2 sm:flex sm:flex-row-reverse">
+            {siteUrl && (
+              <a
+                href={siteUrl}
+                className="block w-full rounded-md bg-indigo-600 px-4 py-2 text-center font-bold capitalize shadow-[0_2px_#000,inset_0_2px_rgb(129_140_248)] hover:bg-indigo-800 active:shadow-none sm:w-fit"
+                target="_blank"
+              >
+                pagina
+              </a>
+            )}
             <a
               href={git}
-              className="block w-full rounded-md bg-indigo-600 px-4 py-2 text-center font-bold shadow-[0_2px_#000,inset_0_2px_rgb(129_140_248)] hover:bg-indigo-800 active:shadow-none sm:w-fit"
+              className="block w-full rounded-md bg-slate-600 px-4 py-2 text-center font-bold capitalize shadow-[0_2px_#000,inset_0_2px_rgb(119_137_163)] hover:bg-indigo-800 active:shadow-none sm:w-fit"
+              target="_blank"
             >
               Github
             </a>
