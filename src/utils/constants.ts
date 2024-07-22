@@ -47,7 +47,7 @@ export const projects: ProjectCardProps[] = [
     tecnologies: ["react", "typescript", "tailwindcss"],
     img: scrollImg.src,
     siteUrl: "https://poke-infinite-scroll.netlify.app",
-    git: "https://github.com/Ezebed/Laravel-To-Do-List",
+    git: "https://github.com/Ezebed/infinite-scroll-react",
   },
 ];
 
