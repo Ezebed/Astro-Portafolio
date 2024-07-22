@@ -30,6 +30,8 @@ export const skills: SkillCardProps[] = [
   },
 ];
 
+import scrollImg from "@/assets/img/projects/infinite-scroll-page-min.png";
+
 export const projects: ProjectCardProps[] = [
   {
     title: "Laravel To Do List",
@@ -38,6 +40,14 @@ export const projects: ProjectCardProps[] = [
     img: "https://raw.githubusercontent.com/Ezebed/Laravel-To-Do-List/main/public/img/example.png",
     siteUrl: "",
     git: "https://github.com/Ezebed/Laravel-To-Do-List",
+  },
+  {
+    title: "Poke Infinite Scroll",
+    description: "scroll infinito usando un custom hook.",
+    tecnologies: ["react", "typescript", "tailwindcss"],
+    img: scrollImg.src,
+    siteUrl: "https://poke-infinite-scroll.netlify.app",
+    git: "https://github.com/Ezebed/infinite-scroll-react",
   },
 ];
 
