@@ -5,27 +5,37 @@ import type { CertificateCardProps } from "@/utils/CertificateCardProps";
 export const skills: SkillCardProps[] = [
   {
     skillText: "html5",
-    bgColor: "shadow-[#e44d26]",
+    bgColor: "#e44d26",
     logoClass: "logos--html-5",
   },
   {
     skillText: "css",
-    bgColor: "shadow-[#264de4]",
+    bgColor: "#264de4",
     logoClass: "logos--css-3",
   },
   {
     skillText: "javascript",
-    bgColor: "shadow-[#f7df1e]",
+    bgColor: "#f7df1e",
     logoClass: "logos--javascript",
   },
   {
     skillText: "laravel",
-    bgColor: "shadow-[#ff2d20]",
+    bgColor: "#ff2d20",
     logoClass: "logos--laravel",
   },
   {
+    skillText: "React",
+    bgColor: "#00d8ff",
+    logoClass: "logos--react",
+  },
+  {
+    skillText: "typescript",
+    bgColor: "#3178c6",
+    logoClass: "logos--typescript-icon",
+  },
+  {
     skillText: "tailwindcss",
-    bgColor: "shadow-[#2298bd]",
+    bgColor: "#2298bd",
     logoClass: "logos--tailwindcss-icon",
   },
 ];
