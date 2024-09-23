@@ -3,15 +3,14 @@ import "../assets/css/main.css";
 import SkillCard from "@/components/SkillCard";
 import ProjectCard from "@/components/ProjectCard";
 import CertificateCard from "@/components/CertificateCard";
-import type { SkillCardProps } from "@/utils/SkillCardProps";
-import type { ProjectCardProps } from "@/utils/ProjectCardProps";
-import type { CertificateCardProps } from "@/utils/CertificateCardProps";
 
 import { projects, skills, certificates } from "@/utils/constants";
 
 // script
 
-// const courseImg:string = "../../public/img/cursos/curso-de-laravel.webp"
+const date = new Date();
+
+const year = date.getUTCFullYear();
 ---
 
 <html lang="es" class="scroll-smooth">
@@ -70,17 +69,32 @@ import { projects, skills, certificates } from "@/utils/constants";
       <h2 class="text-3xl uppercase italic">Skills</h2>
 
       <div class="my-4 flex flex-wrap justify-center gap-x-4 gap-y-2">
-        {skills.map((skill: SkillCardProps) => <SkillCard {...skill} />)}
+        {
+          skills.map((skill) => (
+            <SkillCard
+              skillText={skill.skillText}
+              bgColor={skill.bgColor}
+              logoClass={skill.logoClass}
+            />
+          ))
+        }
       </div>
     </section>
 
     <section class="h-fit space-y-4 px-8">
       <h2 class="text-3xl font-bold uppercase italic">proyectos</h2>
 
-      <div class="flex flex-wrap gap-2">
+      <div class="grid grid-cols-1 place-items-center gap-4 lg:grid-cols-2">
         {
-          projects.map((project: ProjectCardProps) => (
-            <ProjectCard {...project} />
+          projects.map((project) => (
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              img={project.img}
+              tecnologies={project.tecnologies}
+              git={project.git}
+              siteUrl={project.siteUrl}
+            />
           ))
         }
       </div>
@@ -93,8 +107,13 @@ import { projects, skills, certificates } from "@/utils/constants";
         class="flex flex-col flex-wrap justify-center gap-x-2 gap-y-4 md:flex-row"
       >
         {
-          certificates.map((certificate: CertificateCardProps) => (
-            <CertificateCard {...certificate} />
+          certificates.map((certificate) => (
+            <CertificateCard
+              courseName={certificate.courseName}
+              imgSrc={certificate.imgSrc}
+              date={certificate.date}
+              pdfPath={certificate.pdfPath}
+            />
           ))
         }
       </div>
@@ -103,7 +122,9 @@ import { projects, skills, certificates } from "@/utils/constants";
     <section class="space-y-4 px-8">
       <h2 class="text-3xl font-bold uppercase italic">contactame</h2>
 
-      <address class="flex flex-col gap-y-2 rounded-lg bg-[#222] p-4">
+      <address
+        class="flex flex-col gap-y-2 overflow-hidden rounded-lg bg-[#222] p-4"
+      >
         <a
           href="https://wa.me/584163351489"
           target="_blank"
@@ -140,7 +161,7 @@ import { projects, skills, certificates } from "@/utils/constants";
     </section>
 
     <footer class="flex justify-center space-x-4 bg-[rgba(13_13_13_/.6)] py-2">
-      <p><strong>&copy</strong> 2024 Obed Villegas</p>
+      <p><strong>&copy</strong> {year} Obed Villegas</p>
       <a
         class="simple-icons--whatsapp text-xl"
         href="https://wa.me/584163351489"

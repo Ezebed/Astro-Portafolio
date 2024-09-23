@@ -9,7 +9,7 @@ export default function ProjectCard({
   git,
 }: ProjectCardProps): JSX.Element {
   return (
-    <figure className="waiter black-gradient relative flex h-fit w-[20rem] flex-col gap-y-3 rounded-md bg-[rgba(13_13_13_/.6)] sm:h-[15rem] sm:w-[30rem] sm:flex-row sm:justify-end">
+    <div className="waiter black-gradient relative flex h-fit w-[20rem] flex-col gap-y-3 rounded-md bg-[rgba(13_13_13_/.6)] sm:h-[15rem] sm:w-[30rem] sm:flex-row sm:justify-end">
       <img
         src={img}
         alt={title + " img"}
@@ -27,7 +27,7 @@ export default function ProjectCard({
         </div>
 
         <div className="flex w-full flex-col-reverse gap-2 sm:flex-row-reverse">
-          {siteUrl && (
+          {!!siteUrl && (
             <a
               href={siteUrl}
               className="block w-full rounded-md bg-indigo-600 px-4 py-2 text-center font-bold capitalize shadow-[0_2px_#000,inset_0_2px_rgb(129_140_248)] hover:bg-indigo-800 active:shadow-none sm:w-fit"
@@ -38,13 +38,13 @@ export default function ProjectCard({
           )}
           <a
             href={git}
-            className="block w-full rounded-md bg-slate-600 px-4 py-2 text-center font-bold capitalize shadow-[0_2px_#000,inset_0_2px_rgb(119_137_163)] hover:bg-indigo-800 active:shadow-none sm:w-fit"
+            className="block w-full rounded-md bg-slate-600 px-4 py-2 text-center font-bold capitalize shadow-[0_2px_#000,inset_0_2px_rgb(119_137_163)] hover:bg-slate-800 active:shadow-none sm:w-fit"
             target="_blank"
           >
             Github
           </a>
         </div>
       </div>
-    </figure>
+    </div>
   );
 }

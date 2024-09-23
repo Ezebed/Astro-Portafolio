@@ -59,6 +59,20 @@ export const projects: ProjectCardProps[] = [
     siteUrl: "https://poke-infinite-scroll.netlify.app",
     git: "https://github.com/Ezebed/infinite-scroll-react",
   },
+  {
+    title: "E-commerce Shop Cart",
+    description: "simulacion de un carrito de compras de un e-commerce.",
+    tecnologies: [
+      "react",
+      "typescript",
+      "ChakraUI",
+      "react router dom",
+      "tanstack query",
+    ],
+    img: "https://raw.githubusercontent.com/Ezebed/e-commerce-react-ts/main/src/assets/img/ezeStore-min.png",
+    siteUrl: "https://ezebed-e-commerce-shop-cart.netlify.app/",
+    git: "https://github.com/Ezebed/e-commerce-react-ts",
+  },
 ];
 
 import certificateLaravelImg from "@/assets/img/cursos/curso-de-laravel.webp";
