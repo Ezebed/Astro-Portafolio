@@ -14,7 +14,7 @@ export default function CertificateCard({
     >
       <img
         src={imgSrc}
-        alt="certificate_alt"
+        alt={`${courseName} preview`}
         className="h-[10rem] rounded-t-md object-cover"
       />
       <strong className="ml-2 font-bold uppercase">{courseName}</strong>

@@ -3,26 +3,16 @@ import type { SkillCardProps } from "@/utils/SkillCardProps";
 export default function SkillCard({
   skillText,
   bgColor,
-  logoClass,
+  LogoIcon,
 }: SkillCardProps): JSX.Element {
-  // return(
-  //     <figure className="bg-[rgba(13_13_13_/.4)] w-[10rem] h-[8rem] flex flex-col items-center justify-center rounded-md space-y-2 shadow-lg hover:scale-125 transition-transform ease-in-out">
-  //         <span className={logoClass+" text-7xl "}></span>
-
-  //         <p className="text-2xl capitalize ">{skillText}</p>
-  //     </figure>
-  // )
-
   return (
-    <figure
-      className={
-        "flex items-center space-x-2 rounded-full bg-[rgba(13_13_13_/.4)] px-4 py-2 shadow-sm transition-all hover:scale-[1.1] " +
-        bgColor
-      }
+    <div
+      className="flex items-center gap-2 rounded-full border-2 bg-[rgba(21_21_21_/1)] px-4 py-2 transition-all hover:scale-[1.1]"
+      style={{ borderColor: bgColor }}
     >
-      <span className={logoClass + " text-[1rem]"}></span>
+      <LogoIcon />
 
       <p className="text-xl capitalize">{skillText}</p>
-    </figure>
+    </div>
   );
 }
