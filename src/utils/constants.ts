@@ -2,41 +2,49 @@ import type { SkillCardProps } from "@/utils/SkillCardProps";
 import type { ProjectCardProps } from "@/utils/ProjectCardProps";
 import type { CertificateCardProps } from "@/utils/CertificateCardProps";
 
+import { DeviconHtml5 } from "@/icons/DeviconHtml5";
+import { DeviconCss3 } from "@/icons/DeviconCss3";
+import { LogosJavascript } from "@/icons/LogosJavascript";
+import { LogosLaravel } from "@/icons/LogosLaravel";
+import { DeviconReact } from "@/icons/DeviconReact";
+import { DeviconTypescript } from "@/icons/DeviconTypescript";
+import { LogosTailwindcssIcon } from "@/icons/LogosTailwindcssIcon";
+
 export const skills: SkillCardProps[] = [
   {
     skillText: "html5",
     bgColor: "#e44d26",
-    logoClass: "logos--html-5",
+    LogoIcon: DeviconHtml5,
   },
   {
     skillText: "css",
     bgColor: "#264de4",
-    logoClass: "logos--css-3",
+    LogoIcon: DeviconCss3,
   },
   {
     skillText: "javascript",
     bgColor: "#f7df1e",
-    logoClass: "logos--javascript",
+    LogoIcon: LogosJavascript,
   },
   {
     skillText: "laravel",
     bgColor: "#ff2d20",
-    logoClass: "logos--laravel",
+    LogoIcon: LogosLaravel,
   },
   {
     skillText: "React",
     bgColor: "#00d8ff",
-    logoClass: "logos--react",
+    LogoIcon: DeviconReact,
   },
   {
     skillText: "typescript",
     bgColor: "#3178c6",
-    logoClass: "logos--typescript-icon",
+    LogoIcon: DeviconTypescript,
   },
   {
     skillText: "tailwindcss",
     bgColor: "#2298bd",
-    logoClass: "logos--tailwindcss-icon",
+    LogoIcon: LogosTailwindcssIcon,
   },
 ];
 

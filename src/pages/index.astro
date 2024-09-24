@@ -11,6 +11,15 @@ import { projects, skills, certificates } from "@/utils/constants";
 const date = new Date();
 
 const year = date.getUTCFullYear();
+
+// Icons
+
+import { MdiWhatsapp } from "@/icons/MdiWhatsapp";
+import { MdiGithub } from "@/icons/MdiGithub";
+import { MdiLinkedin } from "@/icons/MdiLinkedin";
+import { SimpleIconsProtonmail } from "@/icons/SimpleIconsProtonmail";
+import { MdiFileDownload } from "@/icons/MdiFileDownload";
+import cvDocument from "@/assets/cv/CV_Obed_Villegas.pdf";
 ---
 
 <html lang="es" class="scroll-smooth">
@@ -37,22 +46,24 @@ const year = date.getUTCFullYear();
       <div
         class="flex h-fit w-10/12 flex-wrap items-center justify-center gap-4 rounded-3xl border border-slate-200 bg-[rgba(255_255_255_/.1)] p-4 backdrop-blur-sm md:w-fit"
       >
+        <a href="https://wa.me/584163351489" target="_blank">
+          <MdiWhatsapp fontSize="2rem" />
+        </a>
+        <a href="https://github.com/Ezebed" target="_blank">
+          <MdiGithub fontSize="2rem" />
+        </a>
         <a
-          class="simple-icons--whatsapp text-5xl md:text-3xl"
-          href="https://wa.me/584163351489"
-          target="_blank"></a>
-        <a
-          class="simple-icons--github text-5xl md:text-3xl"
-          href="https://github.com/Ezebed"
-          target="_blank"></a>
-        <a
-          class="simple-icons--linkedin text-5xl md:text-3xl"
           href="https://www.linkedin.com/in/obed-villegas-aa537b132"
-          target="_blank"></a>
-        <a
-          href="mailto:obedvillegas@protonmail.com"
           target="_blank"
-          class="simple-icons--protonmail text-5xl md:text-3xl"></a>
+        >
+          <MdiLinkedin fontSize="2rem" />
+        </a>
+        <a href="mailto:obedvillegas@protonmail.com" target="_blank">
+          <SimpleIconsProtonmail fontSize="2rem" />
+        </a>
+        <a href={cvDocument} target="_blank">
+          <MdiFileDownload fontSize="2rem" />
+        </a>
       </div>
 
       <div class="stars">
@@ -74,7 +85,7 @@ const year = date.getUTCFullYear();
             <SkillCard
               skillText={skill.skillText}
               bgColor={skill.bgColor}
-              logoClass={skill.logoClass}
+              LogoIcon={skill.LogoIcon}
             />
           ))
         }
@@ -84,7 +95,9 @@ const year = date.getUTCFullYear();
     <section class="h-fit space-y-4 px-8">
       <h2 class="text-3xl font-bold uppercase italic">proyectos</h2>
 
-      <div class="grid grid-cols-1 place-items-center gap-4 lg:grid-cols-2">
+      <div
+        class="mx-0 grid grid-cols-1 place-items-center gap-4 lg:mx-16 lg:grid-cols-2"
+      >
         {
           projects.map((project) => (
             <ProjectCard
@@ -130,7 +143,7 @@ const year = date.getUTCFullYear();
           target="_blank"
           class="flex h-8 w-fit items-center gap-x-2 px-2 py-1"
         >
-          <span class="simple-icons--whatsapp text-lg"></span>
+          <MdiWhatsapp fontSize="1.5rem" />
           <p class="text-lg capitalize">+58 416-3351489</p>
         </a>
         <a
@@ -138,7 +151,7 @@ const year = date.getUTCFullYear();
           target="_blank"
           class="flex h-8 w-fit items-center gap-x-2 px-2 py-1"
         >
-          <span class="simple-icons--github text-lg"></span>
+          <MdiGithub fontSize="1.5rem" />
           <p class="text-lg capitalize">github</p>
         </a>
         <a
@@ -146,7 +159,7 @@ const year = date.getUTCFullYear();
           target="_blank"
           class="flex h-8 w-fit items-center gap-x-2 px-2 py-1"
         >
-          <span class="simple-icons--linkedin text-lg"></span>
+          <MdiLinkedin fontSize="1.5rem" />
           <p class="text-lg capitalize">Linkedin</p>
         </a>
         <a
@@ -154,7 +167,7 @@ const year = date.getUTCFullYear();
           target="_blank"
           class="flex h-8 w-fit items-center gap-x-2 px-2 py-1"
         >
-          <span class="simple-icons--protonmail text-lg"></span>
+          <SimpleIconsProtonmail fontSize="1.5rem" />
           <p class="text-md sm:text-lg">obedvillegas@protonmail.com</p>
         </a>
       </address>
@@ -162,22 +175,24 @@ const year = date.getUTCFullYear();
 
     <footer class="flex justify-center space-x-4 bg-[rgba(13_13_13_/.6)] py-2">
       <p><strong>&copy</strong> {year} Obed Villegas</p>
+      <a href="https://wa.me/584163351489" target="_blank">
+        <MdiWhatsapp />
+      </a>
+      <a href="https://github.com/Ezebed" target="_blank">
+        <MdiGithub />
+      </a>
       <a
-        class="simple-icons--whatsapp text-xl"
-        href="https://wa.me/584163351489"
-        target="_blank"></a>
-      <a
-        class="simple-icons--github text-xl"
-        href="https://github.com/Ezebed"
-        target="_blank"></a>
-      <a
-        class="simple-icons--linkedin text-xl"
         href="https://www.linkedin.com/in/obed-villegas-aa537b132"
-        target="_blank"></a>
-      <a
-        href="mailto:obedvillegas@protonmail.com"
         target="_blank"
-        class="simple-icons--protonmail text-xl"></a>
+      >
+        <MdiLinkedin />
+      </a>
+      <a href="mailto:obedvillegas@protonmail.com" target="_blank">
+        <SimpleIconsProtonmail />
+      </a>
+      <a href={cvDocument} target="_blank">
+        <MdiFileDownload />
+      </a>
     </footer>
 
     <script>

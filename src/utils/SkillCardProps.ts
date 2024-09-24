@@ -1,5 +1,7 @@
+import type { ElementType } from "react";
+
 export interface SkillCardProps {
   skillText: string;
   bgColor: string;
-  logoClass: string;
+  LogoIcon: ElementType;
 }
